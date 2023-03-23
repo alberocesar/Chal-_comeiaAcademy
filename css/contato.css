@@ -154,6 +154,32 @@ p {
     padding-right: 15px;
 }
 
+/* formatação de formulario */
+
+form {
+    width: 500px;
+    padding: 15px;
+    margin: 50px auto;
+    border-radius: 20px;
+    background-color: #d8cfa1;
+}
+
+form fieldset {
+    border: 0;
+    padding: 10px;
+
+}
+
+form fieldset label {
+    color: #14160b;
+    display: block;
+}
+
+form fieldset input, textarea {
+    width: 100%;
+    padding: 5px;
+}
+
 /* responsividade */
 
 @media screen and (max-width: 768px) {

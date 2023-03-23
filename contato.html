@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/contato.css">
     <link name="viewport" content="width=device-width, initial-scale=1.0">
+    
 </head>
 <body>
     <div id="container"><!-- Container -->
@@ -41,17 +42,36 @@
 
         <div id="area-principal">
             <h2>
-                Agende sua reserva agora mesmo!
+                Entre em cantato com a gente e faça sua reserva!
             </h2>
-            <br>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-            </p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-            </p>
+            
+            <form onsubmit="event.preventDefault()">
+
+                <fieldset>
+                    <label for="inputNome">Nome</label>
+                    <input type="text" name="input-nome" id="input-nome" required minlength="3">
+                </fieldset>
+
+                <fieldset>
+                    <label for="inputEmail">E-mail</label>
+                    <input type="email" name="input-email" id="input-email" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="inputTelefone">Telefone</label>
+                    <input type="tel" name="input-tel" id="input-tel" placeholder="(99) 99999-9999" required pattern="^\(\d{2}\) \d{5}-\d{4}$" maxlength="15">
+                </fieldset>
+
+                <fieldset>
+                    <label for="inputMensagem">Mensagem</label>
+                    <textarea name="input-msg" id="input-msg" cols="30" rows="10"></textarea>
+                </fieldset>
+
+                <center>
+                    <input type="submit" value="ENVIAR" class="button" onclick="enviarFormulario()">
+                </center>
+
+            </form>
 
                
         </div>
@@ -77,5 +97,7 @@
             </div>
         
     </div><!--Fim Container-->
+
+    <script src="scripts.js" defer></script>
 </body>
 </html>
